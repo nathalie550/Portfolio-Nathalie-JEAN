@@ -4,14 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio JEAN Nathalie</title>
+    <title>Portfolio Nathalie JEAN</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <!-- STRUCTURE TABLETTE -->
-    <div class="tablette">
+    <div class="tablet">
+        <!-- Bouton du haut -->
+        <div class="top-button"></div>
+
+
+        <!-- DATE ET HEURE -->
+        <div class="display">
+            <p class="date">Sunday, March 10</p>
+            <p class="hour">9:47</p>
+        </div>
+
+        <!-- NOTIFICATIONS SUR LA TABLETTE -->
+        <div class="notification">
+
+            <div class="notification-header">
+                <!-- Lien applications.html -->
+                <a href="applications.html">
+                    <img src="assets/notifications.png" alt="notification icon">
+                </a>
+                <p class="site-name">NATHALIE PORTFOLIO</p>
+                <p class="time">1m ago</p>
+            </div>
+
+            <a href="applications.html" class="notification-message">
+                Nathalie vous invite à découvrir son portfolio
+            </a>
+        </div>
+
+
+        <!-- ICONES TORCHE ET CAMERA -->
+        <div class="divIcons">
+            <div class="torch">
+                <img src="assets/torche.png" alt="img torch">
+            </div>
+            <div class="camera">
+                <img src="assets/Camera.png" alt="img camera">
+            </div>
+        </div>
+
+
+
+
+        <!-- BOUTONS EN BAS DE LA TABLETTE-->
+        <div class="bottom-buttons">
+
+            <!-- Bouton Home -->
+            <a href="applications.html" class="menu-button" aria-label="Accueil">
+                <div class="home-button"></div>
+            </a>
+
+            <!-- Bouton Retour -->
+            <a href="javascript:void(0);" class="menu-button" aria-label="Back" onclick="goBack()">
+                <img src="https://img.icons8.com/ios-filled/50/C0C0C0/u-turn-to-left.png" alt="Back" class="back-icon">
+            </a>
+
+        </div>
+
     </div>
 
 

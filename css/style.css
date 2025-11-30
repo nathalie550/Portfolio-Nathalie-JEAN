@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==========================================================================
+   RÉCAPITULATIF DES UNITÉS CSS UTILISÉES
+   ==========================================================================
+
+   1. px (pixels) : unité fixe, dépend de l'écran
+      - 1px = 1 pixel de l'écran
+      - Ex : font-size: 16px → taille fixe de 16 pixels
+
+   2. rem (root em) : unité relative à la taille de la police racine (html)
+      - 1rem = taille de la police définie sur <html> (souvent 16px par défaut)
+      - Ex : font-size: 1.5rem → 1.5 * 16px = 24px
+
+   3. em : unité relative à la taille de police de l'élément parent
+      - 1em = taille de police de son parent
+      - Ex : si parent = 16px, font-size: 1.2em → 19.2px
+
+   4. vw (viewport width) : pourcentage de la largeur de la fenêtre
+      - 1vw = 1% de la largeur de la fenêtre
+      - Utile pour rendre des éléments proportionnels à l'écran
+
+   5. vh (viewport height) : pourcentage de la hauteur de la fenêtre
+      - 1vh = 1% de la hauteur de la fenêtre
+      - Utile pour gérer la hauteur d'éléments 
+
+   6. % (pourcentages) : relatif à l'élément parent
+      - Ex : width: 80% → prend 80% de la largeur de son parent
+
+   CONSEILS :
+   - Utiliser rem pour la typographie → cohérence sur tout le site
+   - Utiliser vw/vh pour les éléments proportionnels à l'écran
+   - % pour le layout relatif aux conteneurs
+   - px seulement pour des valeurs très fixes si nécessaire
+*/
+
+/***************************************PROPRIETES GENERALES******************************/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lato', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*Côte à côte + Si ça rendre pas tout, retour à la ligne*/
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marginTop {
+    margin-top: 2.5rem;
+}
+
+.marginBottom {
+    margin-bottom: 1.8rem;
+}
+
+.gap {
+    gap: 3.4rem;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width45 {
+    width: 45%;
+}
+
+.width55 {
+    width: 55%;
+}
+
+.container {
+    max-width: 62.5rem;
+    /* 1000px */
+    /*Ds container tjs mettre ls propriétés max width et with*/
+    width: 100%;
+    margin: auto;
+    /*c'est égal à margin-right et margin-left=auto*/
+    display: flex;
+}
+
+
+
+/*************************************STRUCTURE DU FORMAT TABLETTE******************************************/
+.tablet {
+    width: 80vw;
+    max-width: 768px;
+    min-height: calc(150vh - 5rem);
+    border-top: 4.4rem solid black;
+    border-bottom: 4.4rem solid black;
+    border-left: 2.2rem solid black;
+    border-right: 2.2rem solid black;
+    outline: 4px solid #d9d9d9;
+    outline-offset: -4px;
+    border-radius: 6vw;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    background-image: url("https://raw.githubusercontent.com/nathalie550/Portfolio-JEAN-Nathalie/master/assets/Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* EN HAUT Boutons argentés en haut de la tablette*/
+.top-button {
+    top: -5.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.5rem;
+    height: 0.75rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(90deg, #d9d9d9, #ffffff, #b3b3b3, #f2f2f2, #a6a6a6);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3), inset 0 0.0625rem 0.125rem rgba(255, 255, 255, 0.7);
+}
+
+
+
+/*******************************DATE ET HEURE EN HAUT*************************/
+.display {
+    padding-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.date {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+.hour {
+    font-size: 6.7rem;
+    text-align: center;
+    margin-top: -0.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+
+/**********************NOTIFICATIONS SUR LA TABLETTE********************/
+.notification {
+    width: 43rem;
+    height: 8.4rem;
+    background-color: #ffffff80;
+    backdrop-filter: blur(5rem);
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.notification p {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.notification-header {
+    display: flex;
+    width: 100%;
+    color: #110b0b9e;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.notification-header img {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.site-name {
+    width: 80%;
+    margin-left: 0.6rem;
+    color: #110b0b9e;
+}
+
+.notification-message {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-left: 0.9rem;
+    color: #0c0303bb;
+    text-decoration: none;
+}
+
+
+/*******************************ICONE CAMERA ET TORCHE*************************/
+.divIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20rem auto 0 auto;
+}
+
+.torch img,
+.camera img {
+    width: 4rem;
+    height: 4rem;
+    opacity: 60%;
+}
+
+
+/**************************************BOUTONS EN BAS DE LA TABLETTE******************************************/
+.bottom-buttons {
+    position: absolute;
+    bottom: -3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* Bouton home (centre) */
+.home-button {
+    width: 6.8rem;
+    height: 1.8rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(90deg, #0b0b0b, #0d0d0d);
+    box-shadow:
+        0.19rem 0.19rem rgba(0, 0, 0, 0.3),
+        inset 0.06rem 0.06rem 0.04rem 0.10rem rgba(255, 255, 255, 0.7);
+}
+
+/* Bouton retour */
+.back-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: drop-shadow(0 0 0.125rem #aaa);
+}
+
+
+
+
+
+/*******************************MEDIA QUERIES***********************************/
+@media screen and (max-width: 800px) {
+    .tablet {
+        width: 80vw;
+        max-width: 768px;
+        min-height: calc(150vh - 5rem);
+        border-top: 4.4rem solid black;
+        border-bottom: 4.4rem solid black;
+        border-left: 2.2rem solid black;
+        border-right: 2.2rem solid black;
+        outline: 4px solid #d9d9d9;
+        outline-offset: -4px;
+        border-radius: 6vw;
+        position: relative;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        background-image: url("https://raw.githubusercontent.com/nathalie550/Portfolio-JEAN-Nathalie/master/assets/Background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Div icons */
+    .divIcons {
+        width: 90%;
+        gap: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 14rem;
+    }
+
+    .bottom-buttons {
+        bottom: 2.5vh;
+        gap: 4rem;
+    }
+}
+
+
+
+
+
+/******************************POUR FORMAT MOBILE**********************************/
+@media screen and (max-width: 500px) {
+    .tablet {
+        width: 95vw;
+        max-width: 350px;
+        min-height: calc(160vh - 3rem);
+        border-top: 3rem solid black;
+        border-bottom: 3rem solid black;
+        border-left: 1.2rem solid black;
+        border-right: 1.2rem solid black;
+        border-radius: 8vw;
+    }
+
+    /*************DIV TORCHE ET CAMERA**********/
+    .divIcons {
+        width: 90%;
+        gap: 3rem;
+        margin-top: 12rem;
+    }
+
+
+    /*************DATE ET HEURE**********/
+    .hour {
+        font-size: 5rem;
+    }
+
+    .date {
+        font-size: 1.6rem;
+    }
+
+    /*************NOTIICATION**********/
+    .notification-header img {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-left: 0.6rem;
+    }
+
+    .notification {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .notification-header p {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+        margin-left: 1.5rem;
+    }
+
+    .site-name {
+        width: auto;
+        margin-left: 0.6rem;
+    }
+
+    .notification-message {
+        width: 90%;
+        text-align: left;
+        font-size: 1.2rem;
+        margin-left: 2.2rem;
+        display: block;
+    }
+
+
+    /*************LES BOUTONS**********/
+    /* Bouton argenté top */
+    .top-button {
+        top: -4vh
+    }
+
+    /* Div boutons */
+    .bottom-buttons {
+        bottom: -5vh;
+        gap: 3rem;
+    }
+
+    /* Bouton home (centre) */
+    .home-button {
+        width: 6.8rem;
+        height: 1.2rem;
+    }
+
+    /* Bouton retour */
+    .back-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+}
