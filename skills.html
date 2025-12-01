@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage -->
+    <meta charset="UTF-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre -->
+    <title>Portfolio Nathalie JEAN</title>
+    <!-- Description SEO -->
+    <meta name="description" content="Découvrez le portfolio de Nathalie JEAN, apprentie développeuse web.">
+    <!-- Auteur -->
+    <meta name="author" content="Nathalie JEAN">
+    <!-- Icônes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/skills.css">
+</head>
+
+
+<body>
+
+    <!-- STRUCTURE TABLETTE -->
+    <div class="tablet">
+        <!-- Bouton du haut -->
+        <div class="top-button"></div>
+
+        <!-- HEURE ET ICONE EN HAUT-->
+        <div class="topy">
+            <p class="topy-hour">14:30</p>
+
+            <div class="iTel">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+
+        <!-- CONTENU DE LA PAGE COMPETENCES -->
+
+        <div class="contentSkills">
+
+            <div class="titleSkills">
+                <h2>💡 Compétences</h2>
+            </div>
+
+            <!-- Cube container -->
+            <div id="cube-container" class="hidden">
+                <div class="cube">
+                    <div class="face front">
+                        <img src="assets/html.png" alt="HTML">
+                    </div>
+                    <div class="face back">
+                        <img src="assets/css.png" alt="CSS">
+                    </div>
+                    <div class="face left">
+                        <img src="assets/js.png" alt="JavaScript">
+                    </div>
+                    <div class="face right">
+                        <img src="assets/php.png" alt="Php">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- SECTION LOGICIELS ET AUTRE -->
+
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>🛠️ Outils et Outils collaboratifs</h3>
+                    <p>Figma, VS Code, GitHub, WordPress, Notion, Trello, Mural</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>📐 Méthodologies</h3>
+                    <p>Design Thinking, Design centré utilisateur</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>💻 Langages</h3>
+                    <p>HTML, CSS, PHP, JS</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BOUTONS EN BAS DE LA TABLETTE-->
+        <div class="bottom-buttons">
+            <!-- Bouton Home -->
+            <a href="applications.html" class="menu-button" aria-label="Accueil">
+                <div class="home-button"></div>
+            </a>
+
+            <!-- Bouton Retour -->
+            <a href="javascript:void(0);" class="menu-button" aria-label="Back" onclick="goBack()">
+                <img src="https://img.icons8.com/ios-filled/50/C0C0C0/u-turn-to-left.png" alt="Back" class="back-icon">
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
