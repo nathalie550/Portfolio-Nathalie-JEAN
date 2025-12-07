@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage -->
+    <meta charset="UTF-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre -->
+    <title>Portfolio Nathalie JEAN</title>
+    <!-- Description SEO -->
+    <meta name="description" content="Découvrez le portfolio de Nathalie JEAN, apprentie développeuse web.">
+    <!-- Auteur -->
+    <meta name="author" content="Nathalie JEAN">
+    <!-- Icônes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/aPropos.css">
+</head>
+
+
+<body>
+
+    <!-- STRUCTURE TABLETTE -->
+    <div class="tablet">
+        <!-- Bouton du haut -->
+        <div class="top-button"></div>
+
+
+        <!-- HEURE ET ICONE EN HAUT-->
+        <div class="topy">
+            <p class="topy-hour">14:30</p>
+
+            <div class="iTel">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+
+
+        <div class="screen-profile">
+
+            <h2>Bienvenue sur mon profil</h2>
+
+            <!--cadre autour orange -->
+            <div class="me">
+
+                <!-- Photo et icônes-->
+                <div class="contentProfile">
+                    <img src="assets/moi.jpg" alt="Ma photo" class="photo-profile">
+
+
+                    <div class="icons-circle">
+                        <a href="story.html" aria-label="My story" class="icon icon-about">
+                            <img src="/assets/Apropos.png" alt="My story">
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/nathalie-jean-315311316/" target="_blank"
+                            aria-label="LinkedIn" class="icon icon-linkedin">
+                            <img src="/assets/linkedin.png" alt="LinkedIn">
+                        </a>
+
+                        <a href="/assets/JEAN Nathalie CV.pdf" target="_blank" aria-label="Mon CV" class="icon icon-cv">
+                            <img src="/assets/MonCv.png" alt="Mon CV">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BOUTONS EN BAS DE LA TABLETTE-->
+        <div class="bottom-buttons">
+            <!-- Bouton Home -->
+            <a href="applications.html" class="menu-button" aria-label="Accueil">
+                <div class="home-button"></div>
+            </a>
+
+            <!-- Bouton Retour -->
+            <a href="javascript:void(0);" class="menu-button" aria-label="Back" onclick="goBack()">
+                <img src="https://img.icons8.com/ios-filled/50/C0C0C0/u-turn-to-left.png" alt="Back" class="back-icon">
+            </a>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
