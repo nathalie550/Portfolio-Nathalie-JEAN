@@ -126,8 +126,7 @@ li {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     background-image: url("https://raw.githubusercontent.com/nathalie550/Portfolio-Nathalie-JEAN/main/assets/loisirImage.png");
     background-size: cover;
-    background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
