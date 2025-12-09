@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==========================================================================
+   RÉCAPITULATIF DES UNITÉS CSS UTILISÉES
+   ==========================================================================
+
+   1. px (pixels) : unité fixe, dépend de l'écran
+      - 1px = 1 pixel de l'écran
+      - Ex : font-size: 16px → taille fixe de 16 pixels
+
+   2. rem (root em) : unité relative à la taille de la police racine (html)
+      - 1rem = taille de la police définie sur <html> (souvent 16px par défaut)
+      - Ex : font-size: 1.5rem → 1.5 * 16px = 24px
+
+   3. em : unité relative à la taille de police de l'élément parent
+      - 1em = taille de police de son parent
+      - Ex : si parent = 16px, font-size: 1.2em → 19.2px
+
+   4. vw (viewport width) : pourcentage de la largeur de la fenêtre
+      - 1vw = 1% de la largeur de la fenêtre
+      - Utile pour rendre des éléments proportionnels à l'écran
+
+   5. vh (viewport height) : pourcentage de la hauteur de la fenêtre
+      - 1vh = 1% de la hauteur de la fenêtre
+      - Utile pour gérer la hauteur d'éléments 
+
+   6. % (pourcentages) : relatif à l'élément parent
+      - Ex : width: 80% → prend 80% de la largeur de son parent
+
+   CONSEILS :
+   - Utiliser rem pour la typographie → cohérence sur tout le site
+   - Utiliser vw/vh pour les éléments proportionnels à l'écran
+   - % pour le layout relatif aux conteneurs
+   - px seulement pour des valeurs très fixes si nécessaire
+*/
+
+/***************************************PROPRIETES GENERALES******************************/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lato', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*Côte à côte + Si ça rendre pas tout, retour à la ligne*/
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marginTop {
+    margin-top: 2.5rem;
+}
+
+.marginBottom {
+    margin-bottom: 1.8rem;
+}
+
+.gap {
+    gap: 3.4rem;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width45 {
+    width: 45%;
+}
+
+.width55 {
+    width: 55%;
+}
+
+.container {
+    max-width: 62.5rem;
+    /* 1000px */
+    /*Ds container tjs mettre ls propriétés max width et with*/
+    width: 100%;
+    margin: auto;
+    /*c'est égal à margin-right et margin-left=auto*/
+    display: flex;
+}
+
+
+
+/************************************STRUCTURE DU FORMAT TABLETTE******************************************/
+.tablet {
+    width: 80vw;
+    max-width: 768px;
+    min-height: calc(150vh - 5rem);
+    border-top: 4.4rem solid black;
+    border-bottom: 4.4rem solid black;
+    border-left: 2.2rem solid black;
+    border-right: 2.2rem solid black;
+    outline: 4px solid #d9d9d9;
+    outline-offset: -4px;
+    border-radius: 6vw;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* EN HAUT Boutons argentés en haut de la tablette*/
+.top-button {
+    top: -5.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.5rem;
+    height: 0.75rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(90deg, #d9d9d9, #ffffff, #b3b3b3, #f2f2f2, #a6a6a6);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3), inset 0 0.0625rem 0.125rem rgba(255, 255, 255, 0.7);
+}
+
+
+/*************************HAUT DE L ECRAN AVEC LES ICONES****************************/
+.topy {
+    height: 2.5rem;
+    padding: 0 1.2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 0.6rem;
+}
+
+.topy p {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0;
+    /* supprime marge par défaut */
+}
+
+.iTel {
+    display: flex;
+    gap: 0.62rem;
+}
+
+.iTel i {
+    font-size: 1.2rem;
+}
+
+
+/*****************************PARTIE SCREEN AVEC BARRE DE DEFILEMENT***********/
+/* Conteneur écran */
+.screen-MeContacter {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 1rem 2rem 1rem;
+    overflow-y: auto;
+}
+
+/* Barre de défilement personnalisée */
+.screen-MeContacter::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.screen-MeContacter::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 144, 113);
+    border-radius: 10px;
+}
+
+.screen-MeContacter::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/****************** Conteneur chat******************/
+#chat-container {
+    width: 90%;
+    max-width: 50rem;
+    margin: auto;
+    border-radius: 1.2rem;
+    background: white;
+}
+
+/* ================== Titres ================== */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fe7e65;
+    margin-bottom: 3rem;
+    text-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.bot h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-left: 5rem;
+    color: #ff9a69;
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+/* Espace entre le titre h2 et l'image robot */
+.bot {
+    width: 38rem;
+    gap: 3rem;
+    padding: 1.5rem 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow:
+        inset 0 0.8rem 1.6rem rgba(0, 0, 0, 0.25),
+        /* ombre interne */
+        inset 0 -0.4rem 1rem rgba(0, 0, 0, 0.12),
+        /* ombre interne bas */
+        0 0.4rem 0.8rem rgba(0, 0, 0, 0.15);
+    /* ombre externe douce */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+/***********************Avatar image*********/
+.bot-avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Ombre douce mais plus visible */
+    box-shadow:
+        0 0.8rem 1.5rem rgba(0, 0, 0, 0.25),
+        0 0 1rem rgba(254, 126, 101, 0.5);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.bot-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/**************************Messages******************/
+#messages {
+    width: 90%;
+    height: 25rem;
+    overflow-y: auto;
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 0.3rem solid #fe9a69;
+    border-radius: 1.4rem;
+    background-color: white;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #2a2a2a;
+    box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+/* Message du bot */
+.bot-message {
+    display: flex;
+    margin-top: 1.5rem;
+    align-items: center;
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+    max-width: 90%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    gap: 1rem;
+    background-color: white;
+    color: #2a2a2a;
+    border: 0.15rem solid #fe9a69;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    /* ombre plus moderne */
+}
+
+
+/* Réponse du bot à l' utilisateur */
+.user-message {
+    background-color: #ff7e65;
+    /* plus punchy */
+    align-self: flex-end;
+    color: #ffffff;
+    padding: 1rem 1.2rem;
+    border-radius: 1.4rem;
+    max-width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================== Input & bouton ================== */
+#userInput {
+    width: 80%;
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+    font-size: 1.4rem;
+    border: 0.25rem solid #ff9a69;
+    outline: none;
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+#sendBtn {
+    padding: 1.2rem 2rem;
+    border: 2px solid #fe9a69;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15);
+    background-color: #ffaf6d;
+    /* plus contrasté */
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+
+#sendBtn:hover {
+    background-color: #fe7e65;
+}
+
+
+
+
+/**************************************BOUTONS EN BAS DE LA TABLETTE******************************************/
+.bottom-buttons {
+    position: absolute;
+    bottom: -3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* Bouton home (centre) */
+.home-button {
+    width: 6.8rem;
+    height: 1.8rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(90deg, #0b0b0b, #0d0d0d);
+    box-shadow:
+        0.19rem 0.19rem rgba(0, 0, 0, 0.3),
+        inset 0.06rem 0.06rem 0.04rem 0.10rem rgba(255, 255, 255, 0.7);
+}
+
+/* Bouton retour */
+.back-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: drop-shadow(0 0 0.125rem #aaa);
+}
+
+
+
+
+/*******************************MEDIA QUERIES — TABLETTES (<800px)***********************************/
+@media screen and (max-width: 800px) {
+
+    /* Cadre tablette */
+    .tablet {
+        width: 85vw;
+        max-width: 650px;
+        min-height: calc(150vh - 5rem);
+        border-top: 3.5rem solid black;
+        border-bottom: 3.5rem solid black;
+        border-left: 2rem solid black;
+        border-right: 2rem solid black;
+        outline: 3px solid #d9d9d9;
+        outline-offset: -3px;
+        border-radius: 7vw;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Icônes du haut */
+    .divIcons {
+        width: 92%;
+        gap: 3rem;
+        margin: 12rem auto 0 auto;
+    }
+
+    /* Boutons du bas */
+    .bottom-buttons {
+        bottom: 3vh;
+        gap: 3.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Avatar bot */
+    .bot-avatar {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+    /* Ligne avatar + titre */
+    .bot {
+        width: 35rem;
+        gap: 2rem;
+    }
+
+    /* Message bot */
+    .bot-message {
+        font-size: 1rem;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Messages container */
+    #messages {
+        width: 92%;
+        height: 22rem;
+        font-size: 1.1rem;
+    }
+
+    /* Input */
+    #userInput {
+        width: 85%;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    /* Bouton envoyer */
+    #sendBtn {
+        font-size: 1.1rem;
+        padding: 1rem 1.6rem;
+    }
+}
+
+
+
+/******************************MEDIA QUERIES — MOBILE (<500px)************************************/
+@media screen and (max-width: 500px) {
+
+    /* Cadre tablette */
+    .tablet {
+        width: 95vw;
+        max-width: 350px;
+        min-height: calc(160vh - 3rem);
+        border-top: 2.2rem solid black;
+        border-bottom: 2.2rem solid black;
+        border-left: 0.9rem solid black;
+        border-right: 0.9rem solid black;
+        border-radius: 9vw;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /*************BOUTONS***********/
+    .top-button {
+        top: -3.5vh;
+    }
+
+    .bottom-buttons {
+        bottom: -4vh;
+        gap: 2.5rem;
+    }
+
+    .home-button {
+        width: 5rem;
+        height: 1rem;
+    }
+
+    .back-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    /*************BARRE DU HAUT***********/
+    .topy {
+        height: 1.4rem;
+        padding: 0 0.5rem;
+        gap: 0.3rem;
+    }
+
+    .topy-hour {
+        font-size: 0.8rem;
+    }
+
+    .iTel {
+        gap: 0.3rem;
+        padding: 0.1rem 0.25rem;
+    }
+
+    .iTel i {
+        font-size: 0.8rem;
+    }
+
+    /*********TITRES*********/
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .bot {
+        display: flex;
+        gap: 0.2rem;
+        width: 75%;
+    }
+
+    /* Avatar */
+    .bot-avatar {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    /* Titre du bot */
+    .bot h2 {
+        font-size: 1rem;
+        margin: 0;
+
+    }
+
+
+    /********MESSAGES********/
+    .bot-message {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #messages {
+        width: 75%;
+        height: 17rem;
+        font-size: 1rem;
+    }
+
+    .user-message {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /********INPUT********/
+    #userInput {
+        width: 75%;
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+
+    #sendBtn {
+        padding: 0.8rem 1.4rem;
+        font-size: 1rem;
+    }
+}

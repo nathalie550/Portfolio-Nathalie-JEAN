@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage -->
+    <meta charset="UTF-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre -->
+    <title>Portfolio Nathalie JEAN</title>
+    <!-- Description SEO -->
+    <meta name="description" content="Découvrez le portfolio de Nathalie JEAN, apprentie développeuse web.">
+    <!-- Auteur -->
+    <meta name="author" content="Nathalie JEAN">
+    <!-- Icônes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/meContacter.css">
+</head>
+
+
+<body>
+
+    <!-- STRUCTURE TABLETTE -->
+    <div class="tablet">
+        <!-- Bouton du haut -->
+        <div class="top-button"></div>
+
+
+        <!-- HEURE ET ICONE EN HAUT-->
+        <div class="topy">
+            <p class="topy-hour">14:30</p>
+
+            <div class="iTel">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+
+        <div class="screen-MeContacter flex">
+            <!-- Titre principal -->
+            <h1>ME CONTACTER</h1>
+
+            <!-- Conteneur global du chat -->
+            <div id="chat-container">
+
+                <!-- Message de bienvenue du bot avec avatar -->
+                <div class="bot flex">
+                    <h2>Hello, je suis Bot !</h2>
+                    <div class="bot-avatar">
+                        <img src="assets/robot.png" alt="ChatBot">
+                    </div>
+                </div>
+
+                <!-- Zone où les messages apparaissent -->
+                <div id="messages"></div>
+
+                <!-- Input utilisateur -->
+                <input type="text" id="userInput" placeholder="Tapez un message...">
+                <button id="sendBtn" type="button">Envoyer</button>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- BOUTONS EN BAS DE LA TABLETTE-->
+        <div class="bottom-buttons">
+            <!-- Bouton Home -->
+            <a href="applications.html" class="menu-button" aria-label="Accueil">
+                <div class="home-button"></div>
+            </a>
+
+            <!-- Bouton Retour -->
+            <a href="javascript:void(0);" class="menu-button" aria-label="Back" onclick="goBack()">
+                <img src="https://img.icons8.com/ios-filled/50/C0C0C0/u-turn-to-left.png" alt="Back" class="back-icon">
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
