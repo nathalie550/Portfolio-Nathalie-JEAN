@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage -->
+    <meta charset="UTF-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre -->
+    <title>Portfolio Nathalie JEAN</title>
+    <!-- Description SEO -->
+    <meta name="description" content="Découvrez le portfolio de Nathalie JEAN, apprentie développeuse web.">
+    <!-- Auteur -->
+    <meta name="author" content="Nathalie JEAN">
+    <!-- Icônes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/metiers.css">
+</head>
+
+
+<body>
+
+    <!-- STRUCTURE TABLETTE -->
+    <div class="tablet">
+        <!-- Bouton du haut -->
+        <div class="top-button"></div>
+
+
+        <!-- HEURE ET ICONE EN HAUT-->
+        <div class="topy">
+            <p class="topy-hour">14:30</p>
+
+            <div class="iTel">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+
+
+        <div class="screen-job flex">
+            <h2>MON PARCOURS</h2>
+
+            <!-- SECTION MES PROFESSIONS -->
+            <div class="one flex">
+                <p>MES PROFESSIONS</p>
+
+                <!-- CONTAINER DES METIERS -->
+                <div class="careers-container">
+
+                    <!-- 1 CARD Assistante administrative Aquaeva -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-clipboard metier-icon"></i>
+                        <p>Assistante administrative AQUAEVA</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup1')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup1">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> 11/2021 à 02/2022 (4 mois)</p>
+                                <p>Mise à jour des dossiers et contrats clients à Vourles (69).</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup1')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 2 CARD Gérante de Secrétaire Home Nathalie -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-user-tie metier-icon"></i>
+                        <p>Gérante de Secrétaire Home Nathalie</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup2')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup2">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Août 2019 à Novembre 2020 (1 an et 4 mois)</p>
+                                <p>Gestion d’une micro-entreprise : transfert de siège du client A2M désembouage,
+                                    procédures Covid, TVA, devis/factures, réservations...</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup2')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 3 CARD Assistante IM Scribe -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-briefcase metier-icon"></i>
+                        <p>Assistante IM Scribe</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup3')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup3">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Février 2018 à Juillet 2018 (6 mois)</p>
+                                <p>Assister la gérante dans les activités administratives liées aux
+                                    services et aux marchés publics.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup3')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 4 Secrétaire 3 S Concept Ingénierie -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-envelope metier-icon"></i>
+                        <p>Secrétaire 3 S Concept Ingénierie</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup4')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup4">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Janvier 2018 à Juillet 2018 (7 mois)</p>
+                                <p>Gestion du courrier, des affaires,facturation clients/fournisseurs, dossier marchés
+                                    publics.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup4')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 5 Assistante administrative Secrétariat spécialisé -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-file-alt metier-icon"></i>
+                        <p>Assistante administrative Secrétariat spécialisé </p>
+                        <button type="button" class="open-button" onclick="openDetail('popup5')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup5">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Décembre 2017 à Janvier 2018 (2 mois)</p>
+                                <p>Divers travaux administratifs à Grand Frais (69 Chaponnay) : mise à
+                                    jour des
+                                    documents, scannage des factures, et classement.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup5')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 6 Assistante administrative EGM à TOTAL Givors -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-biohazard metier-icon"></i>
+                        <p>Assistante administrative EGM à TOTAL Givors</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup6')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup6">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Août 2017 à Octobre 2017 (3 mois)</p>
+                                <p>Travaux de secrétariat et de saisie informatique pour la maintenance
+                                    industrielle
+                                    chez TOTAL ACS Givors.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup6')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 7 Assistante commerciale/RH EEP -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-users metier-icon"></i>
+                        <p>Assistante commerciale/RH EEP AFPA</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup7')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup7">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Mai 2017 à Juin 2017 (2 mois)</p>
+                                <p>Entreprise d'Entraînement Pédagogique (EEP) Identification des documents commerciaux
+                                    et de la gestion des formalités d'embauche
+                                    dans le secteur des ventes de cartouches et toners.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup7')">Fermer</button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 8  Gestion des mails dans le secteur de l'imprimerie  -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-envelope-open-text metier-icon"></i>
+                        <p> Gestion des mails dans le secteur de l'imprimerie </p>
+                        <button type="button" class="open-button" onclick="openDetail('popup8')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup8">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Septembre 2016 à Décembre 2016 (4 mois)</p>
+                                <p>Gestion et catégorisation des mails, identification des émetteurs et des motifs,
+                                    suivi des sinistres et des déclarations auto/non auto.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup8')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 9  Assistante administrative Acier Etudes Noc  -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-address-book metier-icon"></i>
+                        <p> Assistante administrative Acier Etudes Noc</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup9')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup9">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Avril 2014 à Octobre 2014 (7 mois)</p>
+                                <p>Bureau d'études : saisie et envoi des propositions d'honoraires, suivi des contrats,
+                                    mise
+                                    à jour des
+                                    tableaux prévisionnels de facturation, réservation d'hôtels, relance des impayés.
+                                </p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup9')">Fermer</button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 10  Assistante administrative Bétom Ingénierie  -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-drafting-compass metier-icon"></i>
+                        <p> Assistante administrative Bétom Ingénierie</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup10')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup10">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Septembre 2013 à Décembre 2013 (4 mois)</p>
+                                <p>Accueil, gestion du courrier et des mails, création et mise en page de documents et
+                                    suivi des certificats/attestations.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup10')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 11 Assistante de réapprovisionnement Fidel Rhône Alpes  -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-truck metier-icon"></i>
+                        <p> Assistante de réapprovisionnement Fidel RA</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup11')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup11">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Juillet 2002 à Avril 2011 (8 ans et 10 mois)</p>
+                                <p>Gestion des stocks, suivi commandes/livraisons, facturation et traitement des
+                                    non-conformités, avec affrètements internationaux.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup11')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 12 Assistante administrative TEA  -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-car metier-icon"></i>
+                        <p>Assistante administrative TEA</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup12')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup12">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Juillet 2001 à Décembre 2001 (6 mois)</p>
+                                <p>Saisie des garanties des véhicules, rapprochement des dossiers,
+                                    interrogations des
+                                    châssis automobiles.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup12')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 13 Caissière Vendeuse Pier Import  -->
+                    <div class="card-job">
+                        <i class="fa-solid fa-cash-register metier-icon"></i>
+                        <p>Caissière Vendeuse Pier Import</p>
+                        <button type="button" class="open-button" onclick="openDetail('popup13')">Détails</button>
+                        <!-- Popup -->
+                        <div class="detail-popup" id="popup13">
+                            <div class="detail-content">
+                                <p><strong>Dates :</strong> Juin 1990 à Mars 2000 (9 ans et 10 mois)</p>
+                                <p>Responsable de caisse, merchandising, vente, réception de marchandises,
+                                    mise en rayons,inventaire.</p>
+                            </div>
+                            <button type="button" class="close-btn" onclick="closeDetail('popup13')">Fermer</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <!-- BOUTONS EN BAS DE LA TABLETTE-->
+            <div class="bottom-buttons">
+                <!-- Bouton Home -->
+                <a href="applications.html" class="menu-button" aria-label="Accueil">
+                    <div class="home-button"></div>
+                </a>
+
+                <!-- Bouton Retour -->
+                <a href="javascript:void(0);" class="menu-button" aria-label="Back" onclick="goBack()">
+                    <img src="https://img.icons8.com/ios-filled/50/C0C0C0/u-turn-to-left.png" alt="Back"
+                        class="back-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

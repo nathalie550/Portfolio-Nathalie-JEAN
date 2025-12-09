@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage -->
+    <meta charset="UTF-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre -->
+    <title>Portfolio Nathalie JEAN</title>
+    <!-- Description SEO -->
+    <meta name="description" content="Découvrez le portfolio de Nathalie JEAN, apprentie développeuse web.">
+    <!-- Auteur -->
+    <meta name="author" content="Nathalie JEAN">
+    <!-- Icônes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/formations.css">
+</head>
+
+
+<body>
+
+
+    <!-- STRUCTURE TABLETTE -->
+    <div class="tablet">
+        <!-- Bouton du haut -->
+        <div class="top-button"></div>
+
+
+        <!-- HEURE ET ICONE EN HAUT-->
+        <div class="topy">
+            <p class="topy-hour">14:30</p>
+
+            <div class="iTel">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+
+        <!-- PARTIE FORMATIONS -->
+        <div class="screen-training flex">
+            <h2>MON PARCOURS</h2>
+
+            <div class="one flex">
+                <i class="fas fa-award"></i> <!-- Icône diplôme -->
+                <p>MES FORMATIONS</p>
+            </div>
+
+            <!-- SECTION MES FORMATIONS -->
+            <button class="accordion" type="button">LA TOILE Conception et Développement web</button>
+            <div class="panel">
+                <h3> Certification le 14/02/2025</h3>
+                <p><strong>14 octobre 2024 - 30 mai 2025 </strong></p>
+                <p> La toile, l'école de la qualification numérique.</p>
+            </div>
+
+            <button class="accordion" type="button">OPENCLASSROOMS Développeur Web WordPress</button>
+            <div class="panel">
+                <h3>Prolongation Formation</h3>
+                <p><strong>décembre 2023 juin 2024 (6 mois)</strong></p>
+                <p>Chez Openclassrooms à distance</p>
+            </div>
+
+            <button class="accordion" type="button">OPENCLASSROOMS Développeur Web WordPress</button>
+            <div class="panel">
+                <h3>Formation Développeur Web WordPress</h3>
+                <p><strong>novembre 2022 septembre 2023 (10 mois)</strong></p>
+                <p>Chez Openclassrooms à distance</p>
+            </div>
+
+            <button class="accordion" type="button">Formation risque chimique N1 </button>
+            <div class="panel">
+                <h3>Domaine de formation : chimie</h3>
+                <p><strong>2017</strong></p>
+                <p>ATSI Forma log - Certificat de formation à la sécurité des personnels des entreprises extérieures</p>
+            </div>
+
+            <button class="accordion" type="button">Validation des compétences : secrétariat assistanat </button>
+            <div class="panel">
+                <h3>Secrétaire Assistante Niveau IV </h3>
+                <p><strong>2017</strong></p>
+                <p>AFPA Validation des compétences : Domaine de formation : secrétariat assistanat </p>
+            </div>
+
+            <button class="accordion" type="button">Formation qualifiante de Secrétariat Spécialisé </button>
+            <div class="panel">
+                <h3>Secrétariat spécialisé</h3>
+                <p><strong>2001</strong></p>
+                <p>Carrefour Informatique Formation qualifiante de Secrétariat Spécialisé</p>
+            </div>
+
+            <button class="accordion" type="button">Parcours qualifiant de Secrétaire Assistante Niveau IV</button>
+            <div class="panel">
+                <h3>Remise à niveau bac </h3>
+                <p><strong>2000</strong></p>
+                <p>AFPA Bac (général, technique ou professionnel) ou équivalent (NV4)</p>
+            </div>
+
+            <button class="accordion" type="button">CAP Employée des Services Administratifs et Commerciaux </button>
+            <div class="panel">
+                <h3>CAP secrétariat </h3>
+                <p><strong>1989</strong></p>
+                <p>Lycée Fernand Forrest 69800 Saint-Priest</p>
+            </div>
+
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                        } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
+        </div>
+
+
+
+
+
+        <!-- BOUTONS EN BAS DE LA TABLETTE-->
+        <div class="bottom-buttons">
+            <!-- Bouton Home -->
+            <a href="applications.html" class="menu-button" aria-label="Accueil">
+                <div class="home-button"></div>
+            </a>
+
+            <!-- Bouton Retour -->
+            <a href="javascript:void(0);" class="menu-button" aria-label="Back" onclick="goBack()">
+                <img src="https://img.icons8.com/ios-filled/50/C0C0C0/u-turn-to-left.png" alt="Back" class="back-icon">
+            </a>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
